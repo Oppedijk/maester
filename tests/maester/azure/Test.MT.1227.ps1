@@ -8,22 +8,28 @@
     the tenant can let a privileged user transfer their resources to an external tenant.
     Allowing subscriptions to enter the tenant can let a user bring in a subscription
     they control from another tenant.
+
+    .EXAMPLE
+    Test-MtSubscriptionTransferBlocked
+
+    .LINK
+      https://maester.dev/docs/commands/Test-MtSubscriptionTransferBlocked
     #>
     [MaesterTest(
-        Id                 = 'MT.1227',
-        Title              = 'Subscriptions should be blocked from leaving and entering the tenant',
-        Product            = 'azure',
-        Feature            = 'subscriptions',
-        Area               = 'infrastructure',
-        ResourceType       = 'Tenant',
-        Severity           = 'Medium',
-        UserImpact         = 'Low',
+        Id = 'MT.1227',
+        Title = 'Subscriptions should be blocked from leaving and entering the tenant',
+        Product = 'azure',
+        Feature = 'subscriptions',
+        Area = 'infrastructure',
+        ResourceType = 'Tenant',
+        Severity = 'Medium',
+        UserImpact = 'Low',
         ImplementationCost = 'Low',
-        Mitre              = 'T1537',
-        Control            = 'nist-800-53-r5:AC-4',
-        Service            = 'Azure',
-        Author             = 'Oppedijk',
-        Contributor        = 'merill'
+        Mitre = 'T1537',
+        Control = 'nist-800-53-r5:AC-4',
+        Service = 'Azure',
+        Author = 'Oppedijk',
+        Contributor = 'merill'
     )]
     [CmdletBinding()]
     [OutputType([bool])]
